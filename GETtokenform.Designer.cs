@@ -56,7 +56,7 @@
             this.tokentxt.SelectionLength = 0;
             this.tokentxt.SelectionStart = 0;
             this.tokentxt.ShortcutsEnabled = true;
-            this.tokentxt.Size = new System.Drawing.Size(597, 48);
+            this.tokentxt.Size = new System.Drawing.Size(497, 48);
             this.tokentxt.TabIndex = 0;
             this.tokentxt.TabStop = false;
             this.tokentxt.Tag = "Enter token here";
@@ -68,11 +68,11 @@
             // materialButton1
             // 
             this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Dense;
             this.materialButton1.Depth = 0;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(232, 146);
+            this.materialButton1.Location = new System.Drawing.Point(198, 144);
             this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
@@ -87,8 +87,8 @@
             // 
             // GETtokenform
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(610, 189);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(514, 189);
             this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.tokentxt);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

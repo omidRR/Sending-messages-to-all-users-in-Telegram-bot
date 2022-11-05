@@ -798,7 +798,6 @@ namespace REXBOT
             this.MaximizeBox = false;
             this.Name = "REXBOT";
             this.RightToLeftLayout = true;
-            this.ShowIcon = false;
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "REXBOT";

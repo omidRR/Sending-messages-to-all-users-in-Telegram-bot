@@ -60,7 +60,6 @@
             this.tokentxt.TabIndex = 0;
             this.tokentxt.TabStop = false;
             this.tokentxt.Tag = "Enter token here";
-            this.tokentxt.Text = "5068289754:AAHfloxnIuQgGQYxtHy33t11VrVTnQggE-0";
             this.tokentxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tokentxt.TrailingIcon = null;
             this.tokentxt.UseSystemPasswordChar = false;
@@ -96,7 +95,7 @@
             this.MinimizeBox = false;
             this.Name = "GETtokenform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GETtokenform";
+            this.Text = "GETtoken";
             this.Load += new System.EventHandler(this.GETtokenform_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

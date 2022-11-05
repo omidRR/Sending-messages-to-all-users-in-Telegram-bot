@@ -34,13 +34,10 @@ namespace REXBOT
         //braye log pm ma
         Dictionary<long, string> pm = new Dictionary<long, string>();
         ListViewItemSelectionChangedEventArgs listViewItem;
-        public Task<User> botidme;
         private Telegram.Bot.Types.Message ee;
         public static string filedir;
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+        { }
 
         [Obsolete]
         private void materialButton1_Click(object sender, EventArgs e)
@@ -121,8 +118,6 @@ namespace REXBOT
             catch (Exception)
             {
             }
-
-            //    A = e;
             try
             {
                 using (StreamWriter sw = System.IO.File.AppendText("RE\\id.txt"))
@@ -149,7 +144,6 @@ namespace REXBOT
             }
             catch (Exception)
             {
-
             }
 
             try
@@ -163,7 +157,6 @@ namespace REXBOT
                     memberView.SubItems.Add(update.Message.Chat.Title);
                     memberView.SubItems.Add(update.Message.From.Username);
                     memberView.SubItems.Add(DateTime.Now.ToString("yyyy/MM/dd | HH:mm"));
-                    //تکراری نباشه
                     for (int i = 0; i < listView1.Items.Count; i++)
                     {
                         if (listView1.Items[i].Text == memberView.Text)
@@ -236,12 +229,6 @@ namespace REXBOT
         {
             listViewItem = e;
         }
-
-        //[Obsolete]
-        //private async void Client_OnCallbackQuery(object sender, CallbackQueryEventArgs e)
-        //{
-
-        //}
 
         [Obsolete]
         private void materialButton2_Click(object sender, EventArgs e)

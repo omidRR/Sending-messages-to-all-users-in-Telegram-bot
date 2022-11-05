@@ -86,11 +86,13 @@
             // 
             // GETtokenform
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(615, 203);
             this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.tokentxt);
+            this.DrawerAutoShow = true;
+            this.DrawerBackgroundWithAccent = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "GETtokenform";

@@ -8,6 +8,8 @@ namespace REXBOT
     public partial class GETtokenform : MaterialSkin.Controls.MaterialForm
     {
         public static string token;
+
+        [Obsolete]
         public GETtokenform()
         {
             var matskin = MaterialSkinManager.Instance;
@@ -20,7 +22,6 @@ namespace REXBOT
 
         private void GETtokenform_Load(object sender, EventArgs e)
         {
-
         }
 
         [Obsolete]

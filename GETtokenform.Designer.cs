@@ -29,6 +29,7 @@
         [System.Obsolete]
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GETtokenform));
             this.tokentxt = new MaterialSkin.Controls.MaterialTextBox2();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
@@ -86,11 +87,11 @@
             // 
             // GETtokenform
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(610, 189);
             this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.tokentxt);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "GETtokenform";

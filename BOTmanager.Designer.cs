@@ -30,6 +30,7 @@ namespace REXBOT
         [System.Obsolete]
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(REXBOT));
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.listView1 = new MaterialSkin.Controls.MaterialListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -315,7 +316,7 @@ namespace REXBOT
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1167, 541);
+            this.tabPage2.Size = new System.Drawing.Size(1163, 447);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Options";
             // 
@@ -794,6 +795,7 @@ namespace REXBOT
             this.DrawerTabControl = this.materialTabControl1;
             this.DrawerUseColors = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "REXBOT";
             this.RightToLeftLayout = true;

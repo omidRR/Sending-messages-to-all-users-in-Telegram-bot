@@ -30,21 +30,24 @@ namespace REXBOT
             MaterialSkinManager.Instance.ColorScheme = new ColorScheme(Color.Tomato, Color.Tomato,
                 Color.GreenYellow, Color.DarkBlue, TextShade.WHITE);
         }
-        TelegramBotClient Bot = new TelegramBotClient(token:GETtokenform.token);
+        TelegramBotClient Bot = new TelegramBotClient(token: GETtokenform.token);
         //braye log pm ma
         Dictionary<long, string> pm = new Dictionary<long, string>();
         ListViewItemSelectionChangedEventArgs listViewItem;
+        public Task<User> botidme;
         private Telegram.Bot.Types.Message ee;
         public static string filedir;
         private void Form1_Load(object sender, EventArgs e)
-        { }
+        {
+
+        }
 
         [Obsolete]
         private void materialButton1_Click(object sender, EventArgs e)
         {
             try
             {
-               
+
                 var receiverOptions = new ReceiverOptions
                 {
                     AllowedUpdates = new UpdateType[]
@@ -118,6 +121,8 @@ namespace REXBOT
             catch (Exception)
             {
             }
+
+            //    A = e;
             try
             {
                 using (StreamWriter sw = System.IO.File.AppendText("RE\\id.txt"))
@@ -144,6 +149,7 @@ namespace REXBOT
             }
             catch (Exception)
             {
+
             }
 
             try
@@ -157,6 +163,7 @@ namespace REXBOT
                     memberView.SubItems.Add(update.Message.Chat.Title);
                     memberView.SubItems.Add(update.Message.From.Username);
                     memberView.SubItems.Add(DateTime.Now.ToString("yyyy/MM/dd | HH:mm"));
+                    //تکراری نباشه
                     for (int i = 0; i < listView1.Items.Count; i++)
                     {
                         if (listView1.Items[i].Text == memberView.Text)
@@ -229,6 +236,12 @@ namespace REXBOT
         {
             listViewItem = e;
         }
+
+        //[Obsolete]
+        //private async void Client_OnCallbackQuery(object sender, CallbackQueryEventArgs e)
+        //{
+
+        //}
 
         [Obsolete]
         private void materialButton2_Click(object sender, EventArgs e)
@@ -395,7 +408,8 @@ namespace REXBOT
         }
 
         public async void SendThemAll(string path = "RE\\id.txt", long sent = 0, long failed = 0, string toSend = "")
-        { ;
+        {
+            ;
             this.Invoke(new Action(() => { toSend = richTextBox3.Text; }));
             try
             {
@@ -449,7 +463,7 @@ namespace REXBOT
                                 System.IO.File.WriteAllLines("RE\\Success.txt", OkList.Select(x => x.ToString()));
                                 sent++;
                             }
-                          
+
                         }
                         catch (ApiRequestException)
                         {
@@ -465,7 +479,7 @@ namespace REXBOT
                             String[] removelist = System.IO.File.ReadAllLines(path);
                             var cxListremovelist = removelist.Distinct().ToList();
                             cxListremovelist.Remove(id.ToString());
-                             System.IO.File.WriteAllLines(path,cxListremovelist);
+                            System.IO.File.WriteAllLines(path, cxListremovelist);
                             //tekrari failed
                             String[] TextFileLines = System.IO.File.ReadAllLines("RE\\failed.txt");
                             TextFileLines = TextFileLines.Distinct().ToArray();

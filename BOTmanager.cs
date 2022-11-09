@@ -30,7 +30,7 @@ namespace REXBOT
             MaterialSkinManager.Instance.ColorScheme = new ColorScheme(Color.Tomato, Color.Tomato,
                 Color.GreenYellow, Color.DarkBlue, TextShade.WHITE);
         }
-        TelegramBotClient Bot = new TelegramBotClient(token:GETtokenform.token);
+        TelegramBotClient Bot = new TelegramBotClient(token: GETtokenform.token);
         //braye log pm ma
         Dictionary<long, string> pm = new Dictionary<long, string>();
         ListViewItemSelectionChangedEventArgs listViewItem;
@@ -44,7 +44,7 @@ namespace REXBOT
         {
             try
             {
-               
+
                 var receiverOptions = new ReceiverOptions
                 {
                     AllowedUpdates = new UpdateType[]
@@ -395,7 +395,8 @@ namespace REXBOT
         }
 
         public async void SendThemAll(string path = "RE\\id.txt", long sent = 0, long failed = 0, string toSend = "")
-        { ;
+        {
+            ;
             this.Invoke(new Action(() => { toSend = richTextBox3.Text; }));
             try
             {
@@ -449,7 +450,7 @@ namespace REXBOT
                                 System.IO.File.WriteAllLines("RE\\Success.txt", OkList.Select(x => x.ToString()));
                                 sent++;
                             }
-                          
+
                         }
                         catch (ApiRequestException)
                         {
@@ -465,7 +466,7 @@ namespace REXBOT
                             String[] removelist = System.IO.File.ReadAllLines(path);
                             var cxListremovelist = removelist.Distinct().ToList();
                             cxListremovelist.Remove(id.ToString());
-                             System.IO.File.WriteAllLines(path,cxListremovelist);
+                            System.IO.File.WriteAllLines(path, cxListremovelist);
                             //tekrari failed
                             String[] TextFileLines = System.IO.File.ReadAllLines("RE\\failed.txt");
                             TextFileLines = TextFileLines.Distinct().ToArray();

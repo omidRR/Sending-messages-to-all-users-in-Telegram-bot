@@ -14,6 +14,8 @@ using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
+using static System.Net.WebRequestMethods;
+using File = System.IO.File;
 
 namespace REXBOT
 {
@@ -39,7 +41,25 @@ namespace REXBOT
         public static string filedir;
         private void Form1_Load(object sender, EventArgs e)
         {
+            if (Directory.Exists("RE") == false)
+            {
+                System.IO.Directory.CreateDirectory("RE");
 
+            }
+
+            if (File.Exists("RE\\id.txt")==false)
+            {
+                System.IO.File.WriteAllText("RE\\id.txt", "");
+            }
+            if (File.Exists("RE\\Success.txt") == false)
+            {
+                System.IO.File.WriteAllText("RE\\Success.txt", "");
+            }
+
+            if (File.Exists("RE\\failed.txt") == false)
+            {
+                System.IO.File.WriteAllText("RE\\failed.txt", "");
+            }
         }
 
         [Obsolete]
@@ -112,14 +132,18 @@ namespace REXBOT
             }
             catch (System.IO.FileNotFoundException)
             {
-                System.IO.Directory.CreateDirectory("RE");
-                System.IO.File.WriteAllText(@"RE\\id.txt", "");
+                if (File.Exists(@"RE\id.txt")==false)
+                {
+                    System.IO.File.WriteAllText(@"RE\\id.txt", "");
+                }
+          
             }
             catch (System.IO.DirectoryNotFoundException)
             {
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                richTextBox2.Text = ex.Message;
             }
 
             //    A = e;
@@ -201,14 +225,6 @@ namespace REXBOT
                                                update.Message.Text + " \n "));
                 }
 
-
-
-                //////////////////////////////////////////////////////////////////////////
-
-                await bot.SendTextMessageAsync(update.Message.Chat.Id, "ربات در حال بروزرسانی میباشد شکیبا باشید");
-                return;
-
-                ////////////////////////////////////////////////////////////////////////////
 
             }
             catch
@@ -317,54 +333,6 @@ namespace REXBOT
                 await Bot.SendTextMessageAsync(683692798, "Error!!!!!\n" + listboxx.Message);
             }
         }
-
-        private void materialButton4_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                var lineeCount = 0;
-                if (materialLabel17.Text == "")
-                {
-                    MessageBox.Show("Drag your file");
-                    return;
-                }
-
-                using (var reader = System.IO.File.OpenText($"{materialLabel17.Text}"))
-                {
-                    while (reader.ReadLine() != null)
-                    {
-                        lineeCount++;
-                    }
-
-                    materialLabel12.Text = lineeCount.ToString();
-                }
-
-                var linecount = 0;
-                //tekrari failed
-                String[] TextFileLines = System.IO.File.ReadAllLines($"{materialLabel17.Text}");
-                TextFileLines = TextFileLines.Distinct().ToArray();
-                System.IO.File.WriteAllLines($"{materialLabel17.Text}", TextFileLines);
-                using (var reader = System.IO.File.OpenText($"{materialLabel17.Text}"))
-                {
-                    while (reader.ReadLine() != null)
-                    {
-                        linecount++;
-                    }
-
-                    var z = lineeCount - linecount;
-                    materialLabel16.Text = z.ToString();
-                    materialLabel14.Text = linecount.ToString();
-
-                }
-            }
-            catch (Exception exception)
-            {
-                this.Invoke(
-                    new Action(() => { richTextBox2.Text += "Duplicate removal: " + exception.Message + "\n"; }));
-                MessageBox.Show(exception.Message);
-            }
-        }
-
         private void materialSwitch2_CheckedChanged(object sender, EventArgs e)
         {
             if (materialSwitch2.Checked)
@@ -380,12 +348,6 @@ namespace REXBOT
                 MaterialSkinManager.Instance.ColorScheme = new ColorScheme(Color.Tomato, Color.Tomato,
                     Color.GreenYellow, Color.DarkBlue, TextShade.WHITE);
             }
-        }
-
-        private void materialButton4_DragDrop(object sender, DragEventArgs e)
-        {
-            string[] filelist = (string[])e.Data.GetData(DataFormats.FileDrop, false);
-            materialLabel19.Text = filelist[0];
         }
 
         private void materialButton4_DragEnter(object sender, DragEventArgs e)
@@ -451,6 +413,16 @@ namespace REXBOT
                                 await Bot.SendPhotoAsync(id, fsSource, toSend, ParseMode.Markdown,
                                     replyMarkup: shisheMarkup);
                                 OkList.Add(id);
+
+
+                                //////remove ok send from id!!
+                                String[] removelist = System.IO.File.ReadAllLines(path);
+                                var cxListremovelist = removelist.Distinct().ToList();
+                                cxListremovelist.Remove(id.ToString());
+                                System.IO.File.WriteAllLines(path, cxListremovelist);
+
+
+
                                 System.IO.File.WriteAllLines("RE\\Success.txt", OkList.Select(x => x.ToString()));
                                 sent++;
                                 fsSource.Dispose();
@@ -475,6 +447,7 @@ namespace REXBOT
                                 var z = id.ToString();
                                 await sw.WriteLineAsync(z);
                             }
+
                             //////remove duplicate from ids!!
                             String[] removelist = System.IO.File.ReadAllLines(path);
                             var cxListremovelist = removelist.Distinct().ToList();
@@ -484,10 +457,15 @@ namespace REXBOT
                             String[] TextFileLines = System.IO.File.ReadAllLines("RE\\failed.txt");
                             TextFileLines = TextFileLines.Distinct().ToArray();
                             System.IO.File.WriteAllLines("RE\\failed.txt", TextFileLines);
-                        }
-                        catch (Exception)
-                        {
+                     
 
+                        }
+                        catch (Exception ex)
+                        {
+                            richTextBox2.Text = ex.Message+"\n";
+                            failed++;
+                            sent++;
+                            SendThemAll();
                         }
                     }
                     materialLabel7.Text = failed.ToString();

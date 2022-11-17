@@ -67,17 +67,6 @@ namespace REXBOT
             this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.materialCard4 = new MaterialSkin.Controls.MaterialCard();
-            this.materialLabel19 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
-            this.materialLabel18 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel13 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel17 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel14 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel16 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel15 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
             this.richTextBox2 = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -85,7 +74,6 @@ namespace REXBOT
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage3.SuspendLayout();
-            this.materialCard4.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialButton1
@@ -597,177 +585,13 @@ namespace REXBOT
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.LavenderBlush;
-            this.tabPage3.Controls.Add(this.materialCard4);
-            this.tabPage3.Controls.Add(this.materialLabel11);
             this.tabPage3.Controls.Add(this.richTextBox2);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1163, 447);
+            this.tabPage3.Size = new System.Drawing.Size(1141, 488);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "TOOLS!";
-            // 
-            // materialCard4
-            // 
-            this.materialCard4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard4.Controls.Add(this.materialLabel19);
-            this.materialCard4.Controls.Add(this.materialLabel12);
-            this.materialCard4.Controls.Add(this.materialButton4);
-            this.materialCard4.Controls.Add(this.materialLabel18);
-            this.materialCard4.Controls.Add(this.materialLabel13);
-            this.materialCard4.Controls.Add(this.materialLabel17);
-            this.materialCard4.Controls.Add(this.materialLabel14);
-            this.materialCard4.Controls.Add(this.materialLabel16);
-            this.materialCard4.Controls.Add(this.materialLabel15);
-            this.materialCard4.Depth = 0;
-            this.materialCard4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard4.Location = new System.Drawing.Point(14, 14);
-            this.materialCard4.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard4.Name = "materialCard4";
-            this.materialCard4.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard4.Size = new System.Drawing.Size(564, 418);
-            this.materialCard4.TabIndex = 5;
-            // 
-            // materialLabel19
-            // 
-            this.materialLabel19.AutoSize = true;
-            this.materialLabel19.Depth = 0;
-            this.materialLabel19.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel19.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.materialLabel19.Location = new System.Drawing.Point(229, 119);
-            this.materialLabel19.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel19.Name = "materialLabel19";
-            this.materialLabel19.Size = new System.Drawing.Size(1, 0);
-            this.materialLabel19.TabIndex = 5;
-            // 
-            // materialLabel12
-            // 
-            this.materialLabel12.AutoSize = true;
-            this.materialLabel12.Depth = 0;
-            this.materialLabel12.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.materialLabel12.Location = new System.Drawing.Point(17, 119);
-            this.materialLabel12.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel12.Name = "materialLabel12";
-            this.materialLabel12.Size = new System.Drawing.Size(67, 19);
-            this.materialLabel12.TabIndex = 3;
-            this.materialLabel12.Text = "File Path:";
-            // 
-            // materialButton4
-            // 
-            this.materialButton4.AutoSize = false;
-            this.materialButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton4.Depth = 0;
-            this.materialButton4.HighEmphasis = true;
-            this.materialButton4.Icon = null;
-            this.materialButton4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.materialButton4.Location = new System.Drawing.Point(9, 20);
-            this.materialButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton4.Name = "materialButton4";
-            this.materialButton4.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton4.Size = new System.Drawing.Size(537, 36);
-            this.materialButton4.TabIndex = 2;
-            this.materialButton4.Text = "Duplicate removal(DRAG your file \"TXT\")";
-            this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton4.UseAccentColor = false;
-            this.materialButton4.UseVisualStyleBackColor = true;
-            this.materialButton4.Click += new System.EventHandler(this.materialButton4_Click);
-            this.materialButton4.DragDrop += new System.Windows.Forms.DragEventHandler(this.materialButton4_DragDrop);
-            this.materialButton4.DragEnter += new System.Windows.Forms.DragEventHandler(this.materialButton4_DragEnter);
-            // 
-            // materialLabel18
-            // 
-            this.materialLabel18.AutoSize = true;
-            this.materialLabel18.Depth = 0;
-            this.materialLabel18.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.materialLabel18.Location = new System.Drawing.Point(229, 278);
-            this.materialLabel18.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel18.Name = "materialLabel18";
-            this.materialLabel18.Size = new System.Drawing.Size(10, 19);
-            this.materialLabel18.TabIndex = 4;
-            this.materialLabel18.Text = "0";
-            // 
-            // materialLabel13
-            // 
-            this.materialLabel13.AutoSize = true;
-            this.materialLabel13.Depth = 0;
-            this.materialLabel13.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.materialLabel13.Location = new System.Drawing.Point(17, 173);
-            this.materialLabel13.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel13.Name = "materialLabel13";
-            this.materialLabel13.Size = new System.Drawing.Size(102, 19);
-            this.materialLabel13.TabIndex = 3;
-            this.materialLabel13.Text = "Total Number:";
-            // 
-            // materialLabel17
-            // 
-            this.materialLabel17.AutoSize = true;
-            this.materialLabel17.Depth = 0;
-            this.materialLabel17.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.materialLabel17.Location = new System.Drawing.Point(229, 224);
-            this.materialLabel17.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel17.Name = "materialLabel17";
-            this.materialLabel17.Size = new System.Drawing.Size(10, 19);
-            this.materialLabel17.TabIndex = 3;
-            this.materialLabel17.Text = "0";
-            // 
-            // materialLabel14
-            // 
-            this.materialLabel14.AutoSize = true;
-            this.materialLabel14.Depth = 0;
-            this.materialLabel14.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.materialLabel14.Location = new System.Drawing.Point(17, 224);
-            this.materialLabel14.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel14.Name = "materialLabel14";
-            this.materialLabel14.Size = new System.Drawing.Size(71, 19);
-            this.materialLabel14.TabIndex = 3;
-            this.materialLabel14.Text = "Removed:";
-            // 
-            // materialLabel16
-            // 
-            this.materialLabel16.AutoSize = true;
-            this.materialLabel16.Depth = 0;
-            this.materialLabel16.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.materialLabel16.Location = new System.Drawing.Point(229, 173);
-            this.materialLabel16.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel16.Name = "materialLabel16";
-            this.materialLabel16.Size = new System.Drawing.Size(10, 19);
-            this.materialLabel16.TabIndex = 3;
-            this.materialLabel16.Text = "0";
-            // 
-            // materialLabel15
-            // 
-            this.materialLabel15.AutoSize = true;
-            this.materialLabel15.Depth = 0;
-            this.materialLabel15.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.materialLabel15.Location = new System.Drawing.Point(17, 278);
-            this.materialLabel15.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel15.Name = "materialLabel15";
-            this.materialLabel15.Size = new System.Drawing.Size(49, 19);
-            this.materialLabel15.TabIndex = 3;
-            this.materialLabel15.Text = "Result:";
-            // 
-            // materialLabel11
-            // 
-            this.materialLabel11.AutoSize = true;
-            this.materialLabel11.Depth = 0;
-            this.materialLabel11.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.materialLabel11.Location = new System.Drawing.Point(672, 4);
-            this.materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel11.Name = "materialLabel11";
-            this.materialLabel11.Size = new System.Drawing.Size(40, 19);
-            this.materialLabel11.TabIndex = 1;
-            this.materialLabel11.Text = "BUG!:";
+            this.tabPage3.Text = "BUGS";
             // 
             // richTextBox2
             // 
@@ -776,10 +600,10 @@ namespace REXBOT
             this.richTextBox2.Depth = 0;
             this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.richTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.richTextBox2.Location = new System.Drawing.Point(732, 3);
+            this.richTextBox2.Location = new System.Drawing.Point(6, 6);
             this.richTextBox2.MouseState = MaterialSkin.MouseState.HOVER;
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(391, 436);
+            this.richTextBox2.Size = new System.Drawing.Size(1129, 476);
             this.richTextBox2.TabIndex = 0;
             this.richTextBox2.Text = "";
             // 
@@ -810,9 +634,6 @@ namespace REXBOT
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.materialCard4.ResumeLayout(false);
-            this.materialCard4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -848,18 +669,7 @@ namespace REXBOT
         private MaterialSkin.Controls.MaterialSwitch materialSwitch1;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
-        private MaterialSkin.Controls.MaterialButton materialButton4;
-        private MaterialSkin.Controls.MaterialLabel materialLabel11;
-        private MaterialSkin.Controls.MaterialLabel materialLabel18;
-        private MaterialSkin.Controls.MaterialLabel materialLabel17;
-        private MaterialSkin.Controls.MaterialLabel materialLabel16;
-        private MaterialSkin.Controls.MaterialLabel materialLabel15;
-        private MaterialSkin.Controls.MaterialLabel materialLabel14;
-        private MaterialSkin.Controls.MaterialLabel materialLabel13;
-        private MaterialSkin.Controls.MaterialLabel materialLabel12;
-        private MaterialSkin.Controls.MaterialCard materialCard4;
         private MaterialSkin.Controls.MaterialSwitch materialSwitch2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel19;
         private System.Windows.Forms.Label label1;
         private MaterialSkin.Controls.MaterialButton materialButton5;
         private System.Windows.Forms.Label label2;

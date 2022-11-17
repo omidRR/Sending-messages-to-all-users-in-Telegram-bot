@@ -14,7 +14,6 @@ using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
-using static System.Net.WebRequestMethods;
 using File = System.IO.File;
 
 namespace REXBOT
@@ -47,7 +46,7 @@ namespace REXBOT
 
             }
 
-            if (File.Exists("RE\\id.txt")==false)
+            if (File.Exists("RE\\id.txt") == false)
             {
                 System.IO.File.WriteAllText("RE\\id.txt", "");
             }
@@ -132,11 +131,11 @@ namespace REXBOT
             }
             catch (System.IO.FileNotFoundException)
             {
-                if (File.Exists(@"RE\id.txt")==false)
+                if (File.Exists(@"RE\id.txt") == false)
                 {
                     System.IO.File.WriteAllText(@"RE\\id.txt", "");
                 }
-          
+
             }
             catch (System.IO.DirectoryNotFoundException)
             {
@@ -457,12 +456,12 @@ namespace REXBOT
                             String[] TextFileLines = System.IO.File.ReadAllLines("RE\\failed.txt");
                             TextFileLines = TextFileLines.Distinct().ToArray();
                             System.IO.File.WriteAllLines("RE\\failed.txt", TextFileLines);
-                     
+
 
                         }
                         catch (Exception ex)
                         {
-                            richTextBox2.Text = ex.Message+"\n";
+                            richTextBox2.Text = ex.Message + "\n";
                             failed++;
                             sent++;
                             SendThemAll();

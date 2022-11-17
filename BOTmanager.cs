@@ -92,13 +92,12 @@ namespace REXBOT
             catch (Exception ex)
             {
                 this.Invoke(new Action(() => { richTextBox2.Text += "error client: " + ex.Message + "\n"; }));
-                Bot.SendTextMessageAsync(683692798, "Error!!\n" + ex.Message);
             }
         }
 
-        private async Task ErrorHandler(ITelegramBotClient bot, Exception update, CancellationToken arg3)
+        private Task ErrorHandler(ITelegramBotClient bot, Exception update, CancellationToken arg3)
         {
-            await bot.SendTextMessageAsync(683692798, "Error!!\n" + update.Message);
+            return Task.CompletedTask;
         }
 
         private async Task UpdateHandler(ITelegramBotClient bot, Update update, CancellationToken arg3)
@@ -120,14 +119,6 @@ namespace REXBOT
                         materialLabel8.Text = lineCount.ToString();
                     }
                 }));
-                if (update.Message.From.Id.ToString() == ("683692798"))
-                {
-
-                    if (update.Message.Text == "/send")
-                    {
-                        SendThemAll();
-                    }
-                }
             }
             catch (System.IO.FileNotFoundException)
             {
@@ -145,7 +136,6 @@ namespace REXBOT
                 richTextBox2.Text = ex.Message;
             }
 
-            //    A = e;
             try
             {
                 using (StreamWriter sw = System.IO.File.AppendText("RE\\id.txt"))
@@ -242,7 +232,6 @@ namespace REXBOT
             catch (Exception list)
             {
                 this.Invoke(new Action(() => { richTextBox2.Text += "list: " + list.Message + "\n"; }));
-                await Bot.SendTextMessageAsync(683692798, "Error list!!!!\n" + list.Message);
 
             }
         }
@@ -329,7 +318,6 @@ namespace REXBOT
             catch (Exception listboxx)
             {
                 this.Invoke(new Action(() => { richTextBox2.Text += "listbox: " + listboxx.Message + "\n"; }));
-                await Bot.SendTextMessageAsync(683692798, "Error!!!!!\n" + listboxx.Message);
             }
         }
         private void materialSwitch2_CheckedChanged(object sender, EventArgs e)
@@ -363,7 +351,7 @@ namespace REXBOT
             }
             catch (Exception list)
             {
-                await Bot.SendTextMessageAsync(683692798, "Error list!!!!\n" + list.Message);
+                richTextBox2.Text=list.Message+"\n";
 
             }
         }

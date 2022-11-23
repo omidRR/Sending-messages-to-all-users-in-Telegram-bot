@@ -7,3 +7,6 @@
 ![image](https://user-images.githubusercontent.com/64539596/200093739-8794ea3e-d80f-4db1-ae3d-833749f22067.png)
 
 ![image](https://user-images.githubusercontent.com/64539596/200093769-9273acb8-a496-4954-a702-2f5d4e7faf02.png)
+
+If you think this project is helpful to you, you may wish to give a 🌟
+
